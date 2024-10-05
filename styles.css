@@ -1,4 +1,6 @@
 body {
+    position: relative;
+
     background-image: url("henry-be-IicyiaPYGGI-unsplash.jpg");
     /* replace background image later */
     background-size: cover;
@@ -6,7 +8,7 @@ body {
 
     font-family: "Istok Web", sans-serif;
 
-    height: 100vh;
+    min-height: 100vh;
 
     margin: 0;
 }
