@@ -1,0 +1,103 @@
+body {
+    position: relative;
+
+    background-image: url("henry-be-IicyiaPYGGI-unsplash.jpg");
+    /* replace background image later */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: "Istok Web", sans-serif;
+
+    min-height: 100vh;
+
+    margin: 0;
+}
+
+h1 {
+    font-family: "Old Standard TT", serif;
+}
+
+input {
+    font-family: inherit;
+}
+
+/***INNER CONTENT***/
+.centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    gap: 2rem;
+
+    max-width: 80vw;
+}
+
+.background-color-change {
+    background-color: #E0C6BD;
+    color: #7D4343;
+}
+
+/***TITLE***/
+.title {
+    text-align: center;
+}
+
+/***QUOTE***/
+blockquote {
+    margin: 0;
+    padding: 2rem;
+}
+
+blockquote p {
+    margin: 0 2%;
+    font-size: 1.5rem;
+}
+
+.quote-text {
+    position: relative;
+}
+
+.quote-text span {
+    padding-left: 2rem;
+}
+/**QUOTE ICONS**/
+.fa-quote-left {
+    position: absolute;
+}
+
+/**QUOTE AUTHOR**/
+blockquote footer {
+    width: 100%;
+    text-align: right;
+}
+
+/***CHANGE THEME FORM***/
+.change-theme-form {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.change-theme-input {
+    border: 0;
+    border-radius: 14px;
+    padding: .25rem 1rem;
+}
+
+.change-theme-input::placeholder {
+    color: #B78080;
+}
+
+.change-theme-button {
+    background-color: transparent;
+    border: 0;
+    color: #4B0D0D;
+    margin-left: -2rem;
+}
+
+.change-theme-button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
