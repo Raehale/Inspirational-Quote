@@ -1,17 +1,19 @@
+* {
+    box-sizing: border-box;
+}    
+
 body {
-    position: relative;
-
-    background-image: url("henry-be-IicyiaPYGGI-unsplash.jpg");
-    /* replace background image later */
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    font-family: "Istok Web", sans-serif;
-
-    min-height: 100vh;
-
     margin: 0;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+   
 }
+
 
 h1 {
     font-family: "Old Standard TT", serif;
@@ -100,4 +102,7 @@ blockquote footer {
 .change-theme-button:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+.author {
+    text-shadow: 0px 0px 15px #242424;
 }
