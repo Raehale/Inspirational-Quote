@@ -1,20 +1,28 @@
+
+
 import ColorThief from './node_modules/colorthief/dist/color-thief.mjs'
+if (localStorage.getItem('theme')) {
+    backgroundGenerator(localStorage.getItem('theme'))
+} else {
+    backgroundGenerator("nature")
+}
 
-fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
-    .then(res => res.json())
-    .then(data => {
-        document.body.style.backgroundImage = `url(${data.urls.regular})`
-		document.getElementById("authorEl").textContent = `By: ${data.user.name}`
-        getColor(data.urls.regular)
+function backgroundGenerator(backgroundTheme) {
+    fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${backgroundTheme}`)
+      .then(res => res.json())
+      .then(data => {
+          document.body.style.backgroundImage = `url(${data.urls.regular})`
+      document.getElementById("authorEl").textContent = `By: ${data.user.name}`
+          getColor(data.urls.regular)
+      })
+      .catch(err => {
+          // Use a default background image/author
+          document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080)`
+      document.getElementById("authorEl").textContent = `By: Dodi Achmad`
+
+          console.error(err)
     })
-    .catch(err => {
-        // Use a default background image/author
-        document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080)`
-		document.getElementById("authorEl").textContent = `By: Dodi Achmad`
-
-        console.error(err)
-    })
-
+}
     const url = 'https://get-quotes-api.p.rapidapi.com/random'
     const options = {
     method: 'GET',
@@ -27,6 +35,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 try {
     const response = await fetch(url, options)
     const result = await response.json()
+
 
     document.getElementById("root").textContent = `${ result.quote.quote}`
     document.getElementById("author").textContent = `${result.quote.author}`
@@ -60,6 +69,15 @@ function changeTextBgColor(rgbPalette) {
         el.style.backgroundColor = backgroundColor
         el.style.color = textColor
     })
+   document.getElementById("submitBtn").style.color = textColor
+}
 
-    document.getElementById("submitBtn").style.color = textColor
+document.getElementById("themeInputBtn").addEventListener("click", () => {
+    changeTheme(document.getElementById("themeInput").value)
+})
+
+function changeTheme(newTheme) {
+    backgroundGenerator(newTheme)
+    localStorage.setItem('theme', newTheme)
+
 }
