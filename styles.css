@@ -85,7 +85,7 @@ blockquote footer {
 }
 
 .change-theme-input::placeholder {
-    color: #B78080;
+    color: #000;
 }
 
 .change-theme-button {
