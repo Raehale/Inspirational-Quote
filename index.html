@@ -38,18 +38,19 @@
                     <i class="fa-solid fa-quote-right quote"></i>
                 </p>
                 <footer>
-                    <p id="author">E. James Rohn</p>
+                    <p id="author" class="author">E. James Rohn</p>
                 </footer>
             </blockquote>
         </div>
         
-        <p id="authorEl" class="author"></p>
+        <p id="authorEl" class="image-author"></p>
         <form class="change-theme-form">
 
-            <input class="background-color-change change-theme-input" placeholder="change theme" />
-            <button type="submit" class="change-theme-button" id="submitBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="background-color-change change-theme-input" placeholder="change theme" id="changeThemeInput" />
+            <button type="button" class="change-theme-button" id="submitBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="index.js" type="module"></script>
 </body>
 </html>

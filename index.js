@@ -1,5 +1,3 @@
-import ColorThief from '/node_modules/colorthief/dist/color-thief.mjs/'
-
 if (localStorage.getItem('theme')) {
     backgroundGenerator(localStorage.getItem('theme'))
 } else {
@@ -21,8 +19,8 @@ function backgroundGenerator(backgroundTheme) {
 			console.error(err)
     })
 }
-    const url = 'https://get-quotes-api.p.rapidapi.com/random'
-    const options = {
+const url = 'https://get-quotes-api.p.rapidapi.com/random'
+const options = {
     method: 'GET',
     headers: {
         'x-rapidapi-key': 'ab40763e11mshc74fd069866938bp138b87jsn68af667c9eca',
@@ -70,12 +68,12 @@ function changeTextBgColor(rgbPalette) {
     document.getElementById("submitBtn").style.color = textColor
 }
 
-document.getElementById("themeInputBtn").addEventListener("click", () => {
-    changeTheme(document.getElementById("themeInput").value)
+document.getElementById("submitBtn").addEventListener("click", () => {
+    changeTheme(document.getElementById("changeThemeInput").value)
 })
 
 function changeTheme(newTheme) {
+    console.log(newTheme)
     backgroundGenerator(newTheme)
     localStorage.setItem('theme', newTheme)
-
 }
