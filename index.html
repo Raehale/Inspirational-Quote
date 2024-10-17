@@ -6,7 +6,7 @@
     <title>Inspirational Quote</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
+    <meta name="description" content="AN inspirational quote website by Fadumo and Rae" />
 
     <link rel="icon" href="favicon.png">
     
@@ -23,33 +23,41 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main>
-        <p id="authorEl" class="image-author"></p>
+    <div class="centered-content">
+        <header class="title background-color-change">
+            <h1>Website by Fadumo and Rae</h1>
+        </header>
 
-        <div class="centered-content">
-            <div class="title background-color-change">
-                <h1>Website by Fadumo and Rae</h1>
-            </div>
-    
-            <blockquote class="background-color-change">
-                <p class="quote-text">
-                    <i class="fa-solid fa-quote-left quote"></i>
-                    <span id="root">
-                        Success is neither magical nor mysterious. Success is the natural consequence of consistently applying basic fundamentals.
-                    </span>
-                    <i class="fa-solid fa-quote-right quote"></i>
-                </p>
-                <footer>
-                    <p id="author" class="author">E. James Rohn</p>
-                </footer>
-            </blockquote>
-        </div>
+        <main>
+            <section class="background-info">
+                <p id="authorEl" class="image-author"></p>
+            </section>
+
+            <section class="quote-section">
+                <blockquote class="background-color-change">
+                    <p class="quote-text">
+                        <i class="fa-solid fa-quote-left quote"></i>
+                        <span id="root">
+                            Success is neither magical nor mysterious. Success is the natural consequence of consistently applying basic fundamentals.
+                        </span>
+                        <i class="fa-solid fa-quote-right quote"></i>
+                    </p>
+                    <footer>
+                        <p id="author" class="author">E. James Rohn</p>
+                    </footer>
+                </blockquote>
+            </section>
+
+            <section class="change-theme-section">
+                <form class="change-theme-form" aria-label="Change Theme">
+                    <label for="changeThemeInput" class="visually-hidden">Change Theme</label>
+                    <input class="background-color-change change-theme-input" placeholder="change theme" id="changeThemeInput" />
+                    <button type="button" class="change-theme-button" id="submitBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </section>
+        </main>
+    </div>
         
-        <form class="change-theme-form">
-            <input class="background-color-change change-theme-input" placeholder="change theme" id="changeThemeInput" />
-            <button type="button" class="change-theme-button" id="submitBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="index.js" type="module"></script>
 </body>
