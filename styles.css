@@ -13,6 +13,14 @@ body {
     padding: 1rem;
 }
 
+main {
+    display: grid;
+    justify-content: space-between;
+    height: 94vh;
+    width: 98vw;
+    grid-template-columns: 1fr;
+}
+
 h1 {
     font-family: "Old Standard TT", serif;
 }
@@ -29,15 +37,12 @@ input {
 
 /***INNER CONTENT***/
 .centered-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     display: grid;
     gap: 2rem;
 
     max-width: 80vw;
+
+    margin: 0 auto;
 }
 
 .background-color-change {
@@ -47,13 +52,24 @@ input {
 
 /***TITLE***/
 .title {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30vw;
+    height: 100px;
+
+    margin: 0 auto;
 }
 
 /***QUOTE***/
 blockquote {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
     margin: 0;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 blockquote p {
@@ -89,9 +105,9 @@ blockquote footer {
 
 /***CHANGE THEME FORM***/
 .change-theme-form {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 .change-theme-input {
